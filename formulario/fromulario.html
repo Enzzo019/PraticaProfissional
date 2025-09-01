@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #274001;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #corpo {
+            width: 600px;
+        }
+        #avaliacao {
+            border: solid #F29F05;
+            border-radius: 20px;
+            width: 100%;
+            height: 150px;
+            margin-top: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div id="corpo">
+        <h3>Avalie-nos</h3>
+        <label for="avaliacao">Descreva seus comentários, opiniões e reclamações:</label><br>
+        <textarea id="avaliacao" placeholder="Escreva aqui..."></textarea>
+        <button onclick="alert('enviado')">Enviar</button>
+    </div>
+</body>
+</html>
