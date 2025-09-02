@@ -1,0 +1,187 @@
+.menu{
+    display: flex;
+    justify-content:center;
+    padding: 10px;
+    margin: 0px;
+    gap: 7px;
+    border-radius: 15px;
+    font-family: "Quicksand", sans-serif;
+    flex-wrap: nowrap;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+header{
+     background-color: #4F7302;
+     padding: 5px;
+}
+
+#pedidos{
+    background-color: #D97904;
+}
+#mercadorias{
+    background-color:yellowgreen;
+}
+#cadastroentrar{
+    background-color:#F29F05;
+}
+#menusobre{
+    background-color: #274001;
+}
+#menusobre:hover{
+    background-color:blue;
+}
+#mercadorias:hover{
+    background-color: purple;
+}
+#pedidos:hover{
+    background-color:darkgreen;
+}
+#cadastroentrar:hover{
+    background-color:green;
+}
+body{
+    background-color:#374d39;
+}
+footer{
+    background-color: blue;
+}
+.cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    padding: 20px;
+    border-radius: 15px;
+    margin: 50px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: whitesmoke;
+    text-decoration:none;
+    font-family: "Quicksand", sans-serif;
+}
+#card-mercadorias{  
+    background-color: #e93939;}
+#card-pedidos{
+ background-color: #274001;
+}
+
+.card h2 {
+    margin-bottom: 15px;
+}
+
+.card p {
+    margin-bottom: 20px;
+}
+
+.card button {
+    background-color: violet;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.card button:hover {
+    background-color: darkorange;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#cestinha {
+    position: absolute;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: yellow;
+    border-radius: 100px;
+    height: 40px;
+    width: 40px;
+    padding: 5px;
+    color: darkblue;
+    font-size: 27px;
+}
+#carrinho{
+    width: 250px;
+    height: 250px;
+}
+#pesquisa{
+    display: flex;
+    justify-content: center;
+}
+#barra_de_pesquisa{
+    width: 950px;
+    height: 40px;
+}
+#buscar{
+    background-color: darkgreen;
+    padding: 10px;
+    border-radius: 15px;
+    border: none;
+    color: white;
+}
+.logo{
+    width: 70px;
+    height: 70px;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    left: 10px;
+    display: flex;
+    justify-content:center;
+}
+
+#coracao{
+    left: 60px;
+}
+footer{
+    position: fixed;
+    bottom: 0;        
+    width: 100%;       
+    height: 110px;      
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #d7d7d9;
+    border-top: 15px solid grey; 
+    flex-wrap: wrap;    
+}
+.footerdaroca{
+    list-style: none;
+    text-decoration: none;
+}
+.footerdaroca > li,ul,a{
+    color: #595959;
+    gap: 10px;
+}
+.footerdaroca > h3{
+    margin-bottom: 20px;
+}
+.redessocias{
+    font-size:20px;
+    margin-left: 10px;
+    margin-top: 5000px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 100px;
+}   
