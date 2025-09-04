@@ -1,0 +1,133 @@
+@import"https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap";
+
+body {
+    background-color: #D97904;
+}
+
+.card-produtos {
+    width: 450px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px 0;
+    margin: 10px;
+}
+
+.card-produtos > img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+button {
+    background-color: #004901;
+    color: white;
+    font-weight: bold;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+}
+#corpo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    padding: 20px;
+    justify-items: center; 
+}
+#titulo {
+    font-family: "Inknut Antiqua", sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 30px 0 15px 10px;
+    text-align: center;
+}
+#cestinha {
+    position: absolute;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: yellow;
+    border-radius: 100px;
+    height: 40px;
+    width: 40px;
+    padding: 5px;
+    color: darkblue;
+    font-size: 27px;
+}
+.logo{
+    width: 70px;
+    height: 70px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 10px;
+    display: flex;
+    justify-content:center;
+}
+
+#coracao{
+    left: 60px;}
+.menu{
+    display: flex;
+    justify-content:center;
+    padding: 10px;
+    margin: 0px;
+    gap: 7px;
+    border-radius: 15px;
+    font-family: "Quicksand", sans-serif;
+    flex-wrap: nowrap;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+header{
+     background-color: #4F7302;
+     padding: 5px;
+}
+
+#pedidos{
+    background-color: #D97904;
+}
+#mercadorias{
+    background-color:yellowgreen;
+    padding: 20px;
+    border: 2px solid white;
+}
+#cadastroentrar{
+    background-color:#F29F05;
+}
+#menusobre{
+    background-color: #274001;
+}
+#menusobre:hover{
+    background-color:blue;
+}
+#mercadorias:hover{
+    background-color: purple;
+}
+#pedidos:hover{
+    background-color:darkgreen;
+}
+#cadastroentrar:hover{
+    background-color:green;
+}
+
+#sobre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    flex-wrap: wrap;
+    padding: 40px; 
+    margin:120px ;
+    margin-top: 70px;
+    border-radius: 20px;   
+    gap: 10px;
+    padding-bottom: 20px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
