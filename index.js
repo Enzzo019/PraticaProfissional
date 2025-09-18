@@ -28,16 +28,19 @@ app.get('/', (req, res) => {
 });
 
 // GET
-app.get('/produtos', async (req, res) => {
-    try {
-        const resultado = await mssql.query(`SELECT * FROM daroca.produtos`);
-        res.json(resultado.recordset); // retorna só os dados da tabela
-    } catch (erro) {
-        console.error("Erro ao buscar produtos:", erro);
-        res.status(500).json({ error: "Erro ao buscar produtos" });
-    }
-});
+app.get('/produtos',async (req,res)=>{
+    const alunos = await mssql.query("SELECT * FROM daroca.produto")
+    console.log(alunos)
+    res.json(alunos);
 
+})
+// GET CATEGORIA
+app.get('/categorias',async (req,res)=>{
+    const alunos = await mssql.query("SELECT * FROM daroca.categorias")
+    console.log(alunos)
+    res.json(alunos);
+
+})
 // GET COM PARAMETRO
 app.get('/produtos/:id', async (req,res) => {
     const id = parseInt(req.params.id);
@@ -52,16 +55,19 @@ app.get('/produtos/:id', async (req,res) => {
 })
 
 // POST
-app.post('/produtos', (req,res) => {
+app.post('/cadastro',(req,res)=>{
     try{
-        const nome = req.params.nome;
-        const valor = req.params.valor;
-        const descricao = req.params.descricao;
-        mssql.query(`INSERT INTO Aluno (nome,valor,descricao) VALUES ('${nome}', '${valor}', '${descricao}')`)
-        res.status(201).json({ "message" : "Dados inderidos com sucesso!"})
+        
+        const nome=req.body.nome;
+        const endereco =req.body.endereco;
+        const email=req.body.email;
+        const telefone=req.body.telefone;
+        const senha=req.body.senha;
+        mssql.query(`INSERT INTO daroca.Clientes(nome,endereco,email,telefone,senha) VALUES ('${nome}','${endereco}','${email}','${telefone}','${senha}')`)
+        res.status(201).json({"mensagem":"dados inseridos com sucesso."})
     }
     catch (erro) {
-        console.log("Erro na inserção de dados!",erro)
+        console.log("Erro na inserção de dados",erro)
     }
 })
 
@@ -105,3 +111,4 @@ app.use("/produtos", (re,res) => res.json({ message: 'Servidor em execução!'})
 app.listen(porta, () => console.log(`API rodando na porta ${porta}`));
 
 //// FALTAM OS MÉTODOS POST, PATCH, DELETE E GET COM PARAMETRO!!!!!!!!!!!!!!!
+
