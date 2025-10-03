@@ -1,6 +1,7 @@
 const urlProdutos = 'http://localhost:8081/produtos';
 const urlCategorias = 'http://localhost:8081/categorias';
 
+
 let listaProdutos = [];
 
 fetch(urlProdutos)
@@ -25,10 +26,10 @@ function exibeDados(listaProdutos) {
         card += `<p>Preço: R$${listaProdutos[i].valor}</p>`;
         card += '<button>Adicionar</button>';
         card += '</div>';
-    }
+    }  
     document.getElementById("corpo").innerHTML = card;
+    document.getElementById("barra_de_pesquisa").innerHTML="";
 }
-
 
 function montaSelect(listaCategorias) {
     let selectHTML = '<select id="categorias">';
@@ -50,5 +51,47 @@ function montaSelect(listaCategorias) {
             exibeDados(filtrados);
         }
     });
-}   
- 
+}
+
+
+function busca() {
+    let escolha = document.getElementById("barra_de_pesquisa").value;
+    const urlnome_produto  = 'http://localhost:8081/produtos/';
+    fetch(urlnome_produto + escolha)
+        .then(resp => {
+            if (!resp.ok) {
+                throw new Error('Erro na requisição');
+            }
+            return resp.json();
+        })
+        .then(NomeDigitado=>{
+            pornome(NomeDigitado.recordset,escolha) 
+        })
+
+}
+
+function pornome(NomeDigitado,escolha) {
+    
+    let card = ''
+    for (let i = 0; i < NomeDigitado.length; i++) {
+        
+        if (NomeDigitado[i].nome.toUpperCase() == escolha.toUpperCase()) {
+            card+=`<div class="card-produtos">`
+            card+=`<img src="/Da - Roça/${NomeDigitado[i].imagem}" alt="${NomeDigitado[i].descricao}">`
+            card+=`<h3>${NomeDigitado[i].nome}</h3>`
+            card+=`<p>Unidade: kg</p>`
+            card+=`<p>Preço: R$${NomeDigitado[i].valor}</p>`
+            card+=`<button>Adicionar</button>`
+            card+=`</div>`;
+
+            return document.getElementById("corpo").innerHTML = card;
+        }
+
+
+    } 
+    document.getElementById("corpo").innerHTML = "<p>Produto não encontrado</p>";
+}        
+
+
+
+
