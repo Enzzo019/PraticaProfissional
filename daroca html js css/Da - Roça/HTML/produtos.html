@@ -12,20 +12,24 @@
 </head>
 <body>
         <header>
-       <nav class="menu">
-            <a href="/Da - Roça/HTML/daroca.html" class="menu" class="logo"><img src="/Da - Roça/img - daroça/image-Photoroom 5.png" class="logo"><img class="logo" src="/Da - Roça/img - daroça/image-Photoroom 3.png" id="coracao"></a>
-            <a href="/Da - Roça/HTML/produtos.html"  class="menu" id="mercadorias">Mercadorias</a>
-            <a href="#"  class="menu" id="pedidos">Pedidos</a>
-            <a href="/Da - Roça/HTML/cadastro-cliente.html"  class="menu" id="cadastroentrar">Entrar / Cadastrar</a>
-            <a  href="/Da - Roça/HTML/sobredaroca.html" class="menu" id="menusobre">Sobre</a>
-            <a href="" class="menu"><i class="fa-solid fa-basket-shopping" id="cestinha"></i></a>
-        </nav>
-           </header>
+                <nav class="menu">
+                        <a href="/Da - Roça/HTML/daroca.html" class="menu" class="logo"><img src="/Da - Roça/img - daroça/image-Photoroom 5.png" class="logo"><img class="logo" src="/Da - Roça/img - daroça/image-Photoroom 3.png" id="coracao"></a>
+                        <a href="/Da - Roça/HTML/produtos.html"  class="menu" id="mercadorias">Mercadorias</a>
+                        <a href="#"  class="menu" id="pedidos">Pedidos</a>
+                        <a href="/Da - Roça/HTML/cadastro-cliente.html"  class="menu" id="cadastroentrar">Entrar / Cadastrar</a>
+                        <a  href="/Da - Roça/HTML/sobredaroca.html" class="menu" id="menusobre">Sobre</a>
+                        <a href="" class="menu"><i class="fa-solid fa-basket-shopping" id="cestinha"></i></a>
+                    </nav>
+        </header>
 
     <div id="titulo">
             
             <h1>Mercadorias</h1>
-            
+            <section id="pesquisas">
+                <input id="barra_de_pesquisa" type="search" placeholder="Busque o produto desejado: frutas, legumes ou verduras">
+                <button id="buscar" onclick="busca()">buscar</button>
+                <button id="buscar" onclick="exibeDados(listaProdutos)">Volta</button>
+            </section>
         <section id="pesquisa">
             
         </section>
