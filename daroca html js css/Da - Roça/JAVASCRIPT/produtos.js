@@ -89,7 +89,7 @@ function pornome(NomeDigitado,escolha) {
 
 
     } 
-    document.getElementById("corpo").innerHTML = "<p>Produto não encontrado</p>";
+    document.getElementById("corpo").innerHTML = "<p id='verificador'>Produto não encontrado</p>";
 }        
 
 

@@ -135,3 +135,18 @@ header{
     width: 200px;
 
 }
+#verificador{
+    color :white;
+    text-align: center;
+    font-size: 100px;
+
+}
+
+#barra_de_pesquisa{
+    width: 25%;
+    height: 35px;
+}
+.buscar{
+        border: groove;
+        border-color: solid coral;
+}
