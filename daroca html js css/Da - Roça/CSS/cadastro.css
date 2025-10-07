@@ -60,17 +60,18 @@ header{
 #coracao{
     left: 60px;
 }
-#cestinha {
+#cadastrado {
     position: absolute;
     right: 10px;
+    margin-left: 50px;
     display: flex;
     justify-content: center;
-    background-color: yellow;
     border-radius: 100px;
     height: 40px;
     width: 40px;
+    margin-right: 20px;
     padding: 5px;
-    color: darkblue;
+    color: white;
     font-size: 27px;
 }
 #fundo{
@@ -93,17 +94,18 @@ header{
     padding: 70px;
     padding-top: 0px;
     padding-bottom: 40px;
+    
 }
 h1{
     background-color:#004901;
     color: white;   
     text-align: center;
-    margin-left:300px;
     width: fit-content; 
     width: 400px;
     margin-bottom: 0px;
     border-top-left-radius:10px;
     border-top-right-radius:10px;
+    margin: auto;
     
 }
 h2{
@@ -130,4 +132,58 @@ button{
     padding: 10px;
     font-size: x-large;
     border-radius: 12px;
+}
+#cadastro-form, #login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 20px auto;
+    max-width: 500px;
+    padding: 30px;
+    background-color: #EDEDED;
+    border-radius: 25px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+}
+
+
+#cadastro-form input, #login-form input {
+    padding: 12px;
+    font-size: large;
+    border-radius: 10px;
+    border: 1px solid #999;
+}
+
+
+#cadastro-form button, #login-form button, #sair {
+    background-color: #004901;
+    color: white;
+    padding: 12px;
+    font-size: large;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#cadastro-form button:hover, #login-form button:hover, #sair:hover {
+    background-color: #2E8B57;
+}
+
+
+#fundo h1, #fundo p {
+    text-align: center;
+}
+
+
+#fundo {
+    max-width: 700px;
+    padding: 50px;
+    margin-top: 50px;
+}
+
+
+#sair {
+    display: block;
+    margin: 20px auto 0 auto;
+    width: 200px;
 }
