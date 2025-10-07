@@ -1,6 +1,4 @@
 const url = "http://localhost:8081/cadastro";
-
-
 window.addEventListener("DOMContentLoaded", () => {
     const usuario = JSON.parse(localStorage.getItem("usuario"));
 
@@ -37,19 +35,46 @@ function MandaDados() {
     fetch(url, opcoes)
         .then(dados => dados.json())
         .then(resposta => {
-            console.log(resposta);
-
             if (resposta.sucesso) {
-                localStorage.setItem("usuario", JSON.stringify(resposta.usuario));
-                window.location.reload(); 
-            } else {
+                console.log(resposta)
+            }else {
                 alert("Erro no cadastro: " + resposta.mensagem);
             }
+            exibepost(resposta.email)
+
         })
         .catch(erro => {
             console.error("Erro ao cadastrar:", erro);
             alert("Erro no servidor, tente novamente mais tarde.");
         });
+
+}
+function exibepost(dados){
+    document.getElementById("erro").innerHTML = "";
+    const urlnome_produto  = 'http://localhost:8081/cadastro/';
+    fetch(urlnome_produto + dados)
+        .then(resp => {
+            if (!resp.ok) {
+                throw new Error('Erro na requisição');
+            }
+            return resp.json();
+        })
+        .then(NomeDigitado=>{
+            console.log(NomeDigitado.recordset)
+            post_foi(NomeDigitado.recordset) 
+        })
+   
+}
+function post_foi(NomeDigitado) {
+    // salva o nome do usuário no navegador
+    localStorage.setItem("usuario", JSON.stringify(NomeDigitado[0]));
+
+    // mostra o nome no menu (se quiser ver antes de redirecionar)
+    document.getElementById("cadastrado").innerHTML = NomeDigitado[0].nome;
+
+    // redireciona para a página principal
+    window.location.href = "/Da - Roça/HTML/daroca.html";
+    
 }
 
 function logar() {
@@ -78,10 +103,20 @@ function senha(NomeDigitado,login_email,senhas) {
     for (let i = 0; i < NomeDigitado.length; i++) {
         
         if (NomeDigitado[i].email.toUpperCase() == login_email.toUpperCase() && NomeDigitado[i].senha == senhas) {
-            return document.getElementById("cadastrado").innerHTML = NomeDigitado[i].nome;
+                // salva o nome do usuário no navegador
+            localStorage.setItem("usuario", JSON.stringify(NomeDigitado[i]));
+
+            // mostra o nome no menu (se quiser ver antes de redirecionar)
+            document.getElementById("cadastrado").innerHTML = NomeDigitado[i].nome;
+
+            // redireciona para a página principal
+            window.location.href = "/Da - Roça/HTML/daroca.html";
+            return;
         }
 
 
     } 
     document.getElementById("erro").innerHTML = "<p>Conta não encontrado</p>";
+
+
 }        
