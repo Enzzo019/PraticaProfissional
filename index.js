@@ -36,7 +36,7 @@ app.get('/categorias',async (req,res)=>{
 
 })
 
-app.post('/cadastro',(req,res)=>{
+app.post('/cadastro',async(req,res)=>{
     try{
         
         const nome=req.body.nome;
@@ -44,8 +44,8 @@ app.post('/cadastro',(req,res)=>{
         const email=req.body.email;
         const telefone=req.body.telefone;
         const senha=req.body.senha;
-        mssql.query(`INSERT INTO daroca.Clientes(nome,endereco,email,telefone,senha) VALUES ('${nome}','${endereco}','${email}','${telefone}','${senha}')`)
-        res.status(201).json({"mensagem":"dados inseridos com sucesso."})
+        await mssql.query(`INSERT INTO daroca.Clientes(nome,endereco,email,telefone,senha) VALUES ('${nome}','${endereco}','${email}','${telefone}','${senha}')`)
+        res.status(201).json({ "sucesso": true, "mensagem": "dados inseridos com sucesso", "email" : email })
     }
     catch (erro) {
         console.log("Erro na inserção de dados",erro)
@@ -62,7 +62,11 @@ app.get('/cadastro/:email',async (req,res)=>{
         res.json(nome_produto);
 
 })
-
+app.get('/prod/:id',async (req,res)=>{
+    const id = req.params.id;
+    const nome_produto = await mssql.query(`SELECT * FROM daroca.produto WHERE id='${id}'`)
+    res.json(nome_produto);
+})
 
 app.use('/',(req,res) => res.json({mensagem: 'servidor em execusão'}) ) 
     
