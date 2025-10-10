@@ -36,9 +36,9 @@
         <div class="outra_metade">
             <h2>forma de pagamento</h2>
             <div >
-                <button class="forma_de_pagamento"><i class="fa-brands fa-cc-visa"></i> <i class="fa-brands fa-cc-mastercard"></i> <i id="id" class="pf pf-elo"></i>cartão de credito/debito</i></button>
-                <button class="forma_de_pagamento">pix<i class="fa-brands fa-pix"></i></button>
-                <button class="forma_de_pagamento">boleto<i class="fa-solid fa-barcode"></i></button>
+                <button onclick="forma_de_pagamento(forma_do_pagamento)" id="cartao" class="forma_de_pagamento" value="cartao"><i class="fa-brands fa-cc-visa"></i> <i class="fa-brands fa-cc-mastercard"></i> <i id="id" class="pf pf-elo"></i>cartão de credito/debito</i></button>
+                <button onclick="forma_de_pagamento(forma_do_pagamento)" id="pix" class="forma_de_pagamento" value="pix">pix<i class="fa-brands fa-pix"></i></button>
+                <button onclick="forma_de_pagamento(forma_do_pagamento)" id="boleto" class="forma_de_pagamento" value="boleto">boleto<i class="fa-solid fa-barcode"></i></button>
                 <p id="card_do_pagamento">selecione uma forma de pagamento</p>
             </div>
         </div>
