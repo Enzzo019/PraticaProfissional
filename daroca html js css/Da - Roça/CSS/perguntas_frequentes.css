@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Quicksand", sans-serif;
+    min-height: 100vh;      
+    display: flex;
+    flex-direction: column;
+}
+
+#nav-perguntas {
+    height: 100px;
+    background-color: rgb(14, 69, 9);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;
+    position: relative;
+}
+
+.logo {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 400px;
+}
+
+#corpo {
+    flex: 1;                
+    background-color: rgb(195, 195, 195);
+    color: black;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#corpo h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+#corpo h3 {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+
+#txt_pergunta {
+    flex: 1; 
+    border: none;
+    border-radius: 0;
+    padding: 10px 15px;
+    font-size: 16px;
+    outline: none;
+}
+
+#txt_pergunta:focus {
+    border-color: rgb(14, 69, 9);
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(14, 69, 9, 0.3);
+}
+
+.pergunta-item {
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+.pergunta-question {
+    width: 100%;
+    padding: 15px;
+    background-color: rgb(14, 69, 9);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: left;
+    transition: background 0.3s;
+}
+
+.pergunta-question:hover {
+    background-color: rgb(20, 90, 10);
+}
+
+.pergunta {
+    max-height: 0;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    padding: 0 15px;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.pergunta-item.active .pergunta {
+    max-height: 300px; /* isso vai ajustar conforme o conteúdo, para fica no seu devido espaço */
+    padding: 15px;
+}
+
+.btn-pergunta {
+    border: none;
+    background-color: rgb(14, 69, 9);
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.btn-pergunta:hover {
+    background-color: rgb(20, 90, 10);
+}
+
+#div-perguntas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
