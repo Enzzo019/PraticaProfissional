@@ -1,46 +1,89 @@
-@import"https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
+    background-color: #f8f3e7; 
+    font-family: "Quicksand", sans-serif;
+}
+
+header {
+    background-color: #4F7302;
+    padding: 5px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    gap: 7px;
+    border-radius: 15px;
+    font-family: "Quicksand", sans-serif;
+    flex-wrap: nowrap;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+}
+
+#pedidos {
     background-color: #D97904;
 }
 
-.card-produtos {
-    width: 450px;
-    background-color: white;
-    border-radius: 10px;
-    text-align: center;
-    padding: 10px 0;
-    margin: 10px;
-}
-
-.card-produtos > img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-}
-
-button {
-    background-color: #004901;
-    color: white;
-    font-weight: bold;
-    width: 100px;
-    height: 50px;
-    border-radius: 10px;
-}
-#corpo {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 20px; 
+#mercadorias {
+    background-color: yellowgreen;
     padding: 20px;
-    justify-items: center; 
+    border: 2px solid white;
 }
-#titulo {
-    font-family: "Inknut Antiqua", sans-serif;
-    font-size: 24px;
-    font-weight: bold;
-    margin: 30px 0 15px 10px;
-    text-align: center;
+
+#cadastroentrar {
+    background-color: #F29F05;
 }
+
+#menusobre {
+    background-color: #274001;
+}
+
+#menusobre:hover {
+    background-color: blue;
+}
+
+#mercadorias:hover {
+    background-color: purple;
+}
+
+#pedidos:hover {
+    background-color: darkgreen;
+}
+
+#cadastroentrar:hover {
+    background-color: green;
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+#coracao {
+    left: 60px;
+}
+
 #cadastrado {
     position: absolute;
     right: 10px;
@@ -55,130 +98,144 @@ button {
     color: white;
     font-size: 27px;
 }
-.logo{
-    width: 70px;
-    height: 70px;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    left: 10px;
-    display: flex;
-    justify-content:center;
-}
 
-#coracao{
-    left: 60px;}
-.menu{
-    display: flex;
-    justify-content:center;
-    padding: 10px;
-    margin: 0px;
-    gap: 7px;
-    border-radius: 15px;
-    font-family: "Quicksand", sans-serif;
-    flex-wrap: nowrap;
-    align-items: center;
-    text-decoration: none;
-    color: white;
+#titulo {
+    font-family: "Inknut Antiqua", sans-serif;
+    font-size: 24px;
     font-weight: bold;
-}
-header{
-     background-color: #4F7302;
-     padding: 5px;
+    margin: 30px 0 15px 10px;
+    text-align: center;
 }
 
-#pedidos{
-    background-color: #D97904;
-}
-#mercadorias{
-    background-color:yellowgreen;
-    padding: 20px;
-    border: 2px solid white;
-}
-#cadastroentrar{
-    background-color:#F29F05;
-}
-#menusobre{
-    background-color: #274001;
-}
-#menusobre:hover{
-    background-color:blue;
-}
-#mercadorias:hover{
-    background-color: purple;
-}
-#pedidos:hover{
-    background-color:darkgreen;
-}
-#cadastroentrar:hover{
-    background-color:green;
+#titulo h1 {
+    color: #3a7524;
 }
 
-#sobre{
+#pesquisas {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#barra_de_pesquisa {
+    width: 35%;
+    height: 35px;
+    border-radius: 25px;
+    border: 2px solid #3a7524;
+    padding: 5px 15px;
+    font-size: 1rem;
+    background-color: #fffaf0;
+}
+
+#buscar {
+    width: 80px;
+    height: 35px;
+    border-radius: 25px;
+    border: none;
+    background-color: #3a7524;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#buscar:hover {
+    background-color: #2e5c1a;
+    transform: scale(1.05);
+}
+
+#corpo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    padding: 40px;
+    justify-items: center; 
+}
+
+
+.card-produtos {
+    width: 450px;
     background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px 0;
+    margin: 10px;
+    border: 2px solid #e0d7c2;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-produtos:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+.card-produtos > img {
+    width: 200px;
+    height:200px;
+    border-radius: 50%;
+    border:#4f730280 solid ;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+    object-fit: cover;
+}
+
+.card-produtos h3 {
+    color: #3a7524;
+    font-size: 1.4rem;
+    margin: 10px 0 5px;
+}
+
+.card-produtos p {
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.card-produtos button {
+    background-color: #3a7524;
+    color: white;
+    font-weight: bold;
+    width: 100px;
+    height: 45px;
+    border-radius: 10px;
+    border: none;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.card-produtos button:hover {
+    background-color: #2e5c1a;
+    transform: scale(1.05);
+}
+
+#sobre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fffaf0;
     flex-wrap: wrap;
     padding: 40px; 
-    margin:120px ;
-    margin-top: 70px;
+    margin: 120px;
     border-radius: 20px;   
     gap: 10px;
     padding-bottom: 20px;
 }
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-#categorias{
-    width: 200px;
 
-}
-#barra_de_pesquisa{
-    width: 35%;
-    height: 35px;
-    margin-right: 0;
-}
-#buscar{
-    width: 70px;
-    height: 35px;
-    margin: 0;
-    border-radius: 50px;
-    padding: 5px;
-    border-style: solid;
-}
-#quantidade{
-  text-align: center;
-  padding-left:183px ;
-  font-size: 16px;
-  display:flex;
-}
-/* Área principal */
-#nao_logo a  {
-        margin-left: 450px;
-        margin-right: 450px;
-  }
 #nao_logo button {
-
+    background-color: #3a7524;
     color: #fff;
-    padding-left: 10PX;
-    padding-right: 10PX;          /* mais espaço interno */
-    min-width: fit-content;            /* largura mínima para não quebrar o texto */
     border: none;
     border-radius: 12px;
+    padding: 10px 20px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    backdrop-filter: blur(6px);
-    font-size: 1.2rem;
     cursor: pointer;
     transition: 0.3s;
-    text-align: center;           /* centraliza o texto */
-    white-space: nowrap;          /* impede quebra de linha */
 }
 
 #nao_logo button:hover {
     background: #fff;
-    color: #2E7D32;
+    color: #3a7524;
     transform: scale(1.05);
 }
