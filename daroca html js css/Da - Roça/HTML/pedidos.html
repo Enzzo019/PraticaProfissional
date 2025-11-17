@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/8011dc5abc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/Da - Roça/CSS/pedidos.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paymentfont/1.2.5/css/paymentfont.min.css">
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <a href="/Da - Roça/HTML/produtos.html" id="voltar" class="setinha"><i class="fa-solid fa-arrow-left"></i>voltar</a>
+
+        </nav>
+
+  </header>
+  <div class="pagina_inteira">
+  <div class="checkin_do_pedido">
+        <h2 class="checkin_do_pedido">
+            Checkout do pedido
+        </h2>
+        <table id="tabela_de_produtos">
+
+        </table>
+
+        <div onfocus="verificador_do_carrinho()" class="produto_pedido">
+        </div>
+        </div>     
+        <div class="outra_metade">
+            <div id="forms">
+                <h1>Formulário de Envio</h1>
+                <div id="formulario_entrega">
+                    <label for="rua">Rua</label>
+                    <input type="text" id="rua" name="rua" placeholder="Nome da rua" required>
+                    <label for="numero">Número</label>
+                    <input type="text" id="numero" name="numero" placeholder="Ex: 123" required>
+                    <label for="bairro">Bairro</label>
+                    <input type="text" id="bairro" name="bairro" placeholder="Nome do bairro" required>
+                    <label for="cidade">Cidade</label>
+                    <input type="text" id="cidade" name="cidade" placeholder="Ex: Campinas" required>
+                    <label for="estado">Estado</label>
+                    <select id="estado" name="estado" required>
+                      <option value="">Selecione</option>
+                      <option value="SP">SP</option>
+                      <option value="RJ">RJ</option>
+                      <option value="MG">MG</option>
+                      <option value="RS">RS</option>
+                      <option value="PR">PR</option>
+                      <option value="SC">SC</option>    
+                      <option value="BA">BA</option>
+                      <!-- pode adicionar mais estados -->
+                    </select>
+                    <label for="cep">CEP</label>
+                    <input type="text" id="cep" name="cep" placeholder="00000-000" required>
+            </div>
+            </div>
+                <div id="preço_total"> 
+                    <label for="frete" class="total_paga">Frete (R$)</label>
+                    <p id="frete"></p>
+                    <p class="total_paga">Total:</p>
+                    <p id="total_a_paga"></p>
+
+                    <a href="pagamento.html"><button >ir para o pagamento</button></a>
+                </div>
+            </div>
+        </div>
+  </div>
+    <footer>
+        <h1 id="valor_total"></h1>
+    </footer>
+
+    <div>
+        <script src="/Da - Roça/JAVASCRIPT/pedidos.js"></script></div>
+</body>
+</html> 
