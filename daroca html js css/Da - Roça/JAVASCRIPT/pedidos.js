@@ -36,4 +36,14 @@ const fretes = {
     document.getElementById("total_a_paga").innerText = totalComFrete.toFixed(2);
     
   });
-  
+let cepInput = document.getElementById("cep");
+
+function tracinho_do_cep() {
+  let cep = cepInput.value.replace(/\D/g, ""); 
+
+  if (cep.length > 5) {
+    cep = cep.slice(0, 5) + "-" + cep.slice(5);
+  }
+
+  cepInput.value = cep;
+}

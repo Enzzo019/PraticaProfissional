@@ -33,13 +33,13 @@
                 <h1>Formulário de Envio</h1>
                 <div id="formulario_entrega">
                     <label for="rua">Rua</label>
-                    <input type="text" id="rua" name="rua" placeholder="Nome da rua" required>
+                    <input type="text" id="rua" name="rua" placeholder="Nome da rua" required maxlength="100">
                     <label for="numero">Número</label>
-                    <input type="text" id="numero" name="numero" placeholder="Ex: 123" required>
+                    <input type="text" id="numero" name="numero" placeholder="Ex: 123" required maxlength="9">
                     <label for="bairro">Bairro</label>
-                    <input type="text" id="bairro" name="bairro" placeholder="Nome do bairro" required>
+                    <input type="text" id="bairro" name="bairro" placeholder="Nome do bairro" required maxlength="100">
                     <label for="cidade">Cidade</label>
-                    <input type="text" id="cidade" name="cidade" placeholder="Ex: Campinas" required>
+                    <input type="text" id="cidade" name="cidade" placeholder="Ex: Campinas" required maxlength="100">
                     <label for="estado">Estado</label>
                     <select id="estado" name="estado" required>
                       <option value="">Selecione</option>
@@ -53,7 +53,7 @@
                       <!-- pode adicionar mais estados -->
                     </select>
                     <label for="cep">CEP</label>
-                    <input type="text" id="cep" name="cep" placeholder="00000-000" required>
+                    <input type="text" id="cep" oninput="tracinho_do_cep(cep)" name="cep" placeholder="00000-000" required maxlength="9" >
             </div>
             </div>
                 <div id="preço_total"> 
