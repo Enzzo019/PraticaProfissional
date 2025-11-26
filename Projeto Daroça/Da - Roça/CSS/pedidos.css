@@ -1,0 +1,274 @@
+@import"https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap";
+
+body {
+    background: #D8CBB5;
+}
+
+
+#corpo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    justify-items: center; 
+}
+.pagina_inteira {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    align-items: flex-start;
+}
+.setinha {
+    margin: 0px;
+    padding: 10px;
+    border-radius: 15px;
+    position: fixed;  
+    left: 100px;          
+    display: flex;
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 18px;      
+    top: 35px;
+    background-color: black;
+}
+.checkin_do_pedido{
+    margin-top: 25px;
+    margin-left: 40px;
+    padding: 0;
+    flex: 1;
+}
+#tabela_de_produtos{
+    margin-left:100px ;
+    margin-top: 30px;
+    border-collapse: collapse;
+}
+th{
+    padding-left: 0px;
+    padding-right: 125px;
+}
+
+.menu{
+    display: flex;
+    justify-content:center;
+    padding: 10px;
+    margin: 0px;
+    gap: 7px;
+    border-radius: 15px;
+    font-family: "Quicksand", sans-serif;
+    flex-wrap: nowrap;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-weight: bold; 
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.fa-slab-press fa-regular fa-arrow-left{
+    color: #004901;
+}
+footer{
+    position: fixed;
+    bottom: 100px;
+    padding-left: 25%;
+    padding-bottom: 50px;
+}
+.outra_metade{
+    flex: 1;
+    background: linear-gradient(to right, #2E7D32, #004b00);
+
+
+    padding-top: 40px;
+    margin: auto;
+    height: auto;
+    box-shadow: 0 0 10px;
+    border-radius: 50px;
+}
+#voltar:hover{
+    color: #352f36;
+    background-color: bisque;
+    transform: translateX(-30px);
+   
+}
+#voltar {
+    transition: 1s;
+}
+.forma_de_pagamento{
+    padding: 10px;
+    font-size: 20px;
+    margin-top:10px;
+    border: hidden;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+#card_do_pagamento{
+    background-color: whitesmoke;
+    width: 80%;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 10px;
+}
+.imagem_pedido{
+    width: 100px;
+    right:100px;
+}
+table,tr,td{
+    background-color: white;
+    border: solid black;    
+    text-align: center;
+}
+
+th{
+    background-color:#004b00;
+    color: white;
+    font-size:x-large;
+    text-align: center;
+}
+#preço_total {
+    margin-top: 20px;
+    padding: 15px;
+    padding-left:auto;
+    padding-right: auto;
+    background: linear-gradient(to right, #4CAF50, #2E7D32);
+    border-end-end-radius: 50px;
+    border-bottom-left-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color:white;
+    display: flex;
+}
+#total_a_paga,#frete{
+    font-size: 1.8em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+.total_paga {
+    padding-left: 10px;
+    font-size: 1.8em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-left: 10px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+#imagem_paga{
+    width: 200px;
+    height: 200px;
+}
+#imagem_boleto{
+    width: 400px;
+    height: 200px;
+}
+#forma_paga{
+    text-align: center;
+}
+#formulario_entrega {
+    display: flex;
+    flex-direction: column;   /* coloca tudo um embaixo do outro */
+    gap: 12px;                /* espaço entre cada elemento */
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+    border: 2px solid black;
+  }
+  
+  #formulario_entrega label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 4px;
+  }
+  
+  #formulario_entrega input,
+  #formulario_entrega select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    transition: border-color 0.3s;
+  }
+  
+  #formulario_entrega input:focus,
+  #formulario_entrega select:focus {
+    outline: none;
+    border-color: #4CAF50; /* muda cor da borda ao focar */
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+  }
+  
+  #formulario_entrega select {
+    background-color: #fafafa;
+  }
+  
+  #formulario_entrega input::placeholder {
+    color: #aaa;
+  }
+  
+  #formulario_entrega input,#formulario_entrega select {
+    box-sizing: border-box;
+    width: 100%;
+  }
+  a {
+    text-decoration: none; /* tira o sublinhado do link */
+    margin-left:auto ;
+  }
+  
+  a button {
+    background-color: #4CAF50;     /* verde bonito */
+    color: white;                  /* texto branco */
+    border: none;                  /* sem borda */
+    padding: 12px 25px;            /* tamanho confortável */
+    border-radius: 12px;           /* bordas arredondadas */
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;              /* animação suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  a button:hover {
+    background-color: #45a049;
+    transform: scale(1.05); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  #forms{
+    text-align: center;
+  }
+
+
+  .botoes_checkout {
+    display: flex;
+    justify-content: center;   /* centraliza */
+    gap: 15px;                 /* espaço entre eles */
+    margin-top: 20px;
+}
+
+.botoes_checkout button {
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+h1 {
+    font-family: sans-serif;
+    font-family: 500;
+    color: white;
+}
+
+.checkin_do_pedido {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 900;
+}
+
+#tabela_de_produtos {
+    border-radius: 10px;
+}

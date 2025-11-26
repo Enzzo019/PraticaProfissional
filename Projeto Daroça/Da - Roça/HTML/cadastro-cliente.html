@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cadastre sua conta</title>
+    <link rel="website icon" type="png" href="/Da - Roça/img - daroça/image-Photoroom 3.png">
+    <link rel="stylesheet" href="/Da - Roça/CSS/cadastro.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+      <script src="https://kit.fontawesome.com/8011dc5abc.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+       <nav class="menu">
+            <a href="/Da - Roça/HTML/daroca.html" class="menu" class="logo"><img src="/Da - Roça/img - daroça/image-Photoroom 5.png" class="logo"><img class="logo" src="/Da - Roça/img - daroça/image-Photoroom 3.png" id="coracao"></a>
+            <a href="/Da - Roça/HTML/produtos.html"  class="menu" id="mercadorias">Mercadorias</a>
+            <a href="/Da - Roça/HTML/pedidos.html"  class="menu" id="pedidos">Pedidos</a>
+            <a href="/Da - Roça/HTML/cadastro-cliente.html"  class="menu" id="cadastroentrar">Entrar / Cadastrar</a>
+            <a  href="/Da - Roça/HTML/sobredaroca.html" class="menu" id="menusobre">Sobre</a>
+            <p class="menu" id="cadastrado"></p>
+            <!--<a href="" class="menu"></a>-->
+
+        </nav>
+    </header>
+    <div id="fundo">
+        <h1>Da-Roça</h1>
+        <div id="fundo-menor">
+            <h2>Cadastre-se ou entre na sua conta!</h2>
+
+            <div id="cadastro-form">
+                <label>Seu Nome:</label>
+                <input type="text" id="nome">
+                <label>Seu Endereço:</label>
+                <input type="text" id="endereco">
+                <label>Seu Email:</label>
+                <input type="text" id="email">
+                <label>Seu Telefone:</label>
+                <input type="text" id="telefone" required maxlength="9">
+                <label>Sua Senha:</label>
+                <input type="password" id="senha"required maxlength="6">
+                <button onclick="MandaDados()">Cadastra-se</button>
+            </div>
+
+            <p id="texto"></p>
+
+            <div id="login-form">
+                <label>Email:</label>
+                <input type="text" id="login-email">
+                <label>Senha:</label>
+                <input type="password" id="login-senha">
+                <button onclick="logar()">Entrar</button>
+                <p id="erro"></p>
+            </div>
+
+
+        </div>
+    </div>
+
+    <script src="/Da - Roça/JAVASCRIPT/cadastro.js"></script>
+</body>
+</html>
