@@ -61,7 +61,7 @@ const usuarioLogado = JSON.parse(localStorage.getItem("usuario"));
 if (usuarioLogado != null){
     let info =""
     info += `<h1 id='texto'>${usuarioLogado.nome} Logado(a)</h1>`;
-    info += `<img src="/Da - Roça/img - daroça/usuario_sem_foto.png" alt="Usuario" id="cliente">`;
+    info += `<img src="/Projeto Daroça/Da - Roça/img - daroça/usuario_sem_foto.png" alt="Usuario" id="cliente">`;
     info += `<div class="info-usuario"><br>`;
     info += `<ul>`;
     info += `<li class='info'> <p class='paragrafo'>Nome:<p/> ${usuarioLogado.nome}</li>`;
@@ -79,7 +79,7 @@ const urlProdutos = 'http://localhost:8081/historico/';
 let email =usuarioLogado.email
 fetch(urlProdutos+email)
 .then(res => res.json())
-.then(listaProdutos => {
+.then(listaProdutos => {    
     exibeCompras(listaProdutos.recordset);
 })
 

@@ -1,9 +1,9 @@
 function pagamento_pix(){
-    document.getElementById("forma_paga").innerHTML='<img src="/Da - Roça/img - daroça/pix.png" alt="" id="imagem_paga">'
+    document.getElementById("forma_paga").innerHTML='<img src="/Projeto Daroça/Da - Roça/img - daroça/pix.png" alt="" id="imagem_paga">'
     document.getElementById("forma_paga").style='background-color:white;'
 }
 function pagamento_boleto() {
-    document.getElementById("forma_paga").innerHTML='<img src="/Da - Roça/img - daroça/boelto.png" alt="" id="imagem_boleto">'
+    document.getElementById("forma_paga").innerHTML='<img src="/Projeto Daroça/Da - Roça/img - daroça/boelto.png" alt="" id="imagem_boleto">'
     document.getElementById("forma_paga").style='background-color:white;'
 
 }
@@ -52,6 +52,6 @@ function comprado() {
         .then(res => res.json())
         .then(data => console.log(data))
         .catch(erro => console.log("Erro:", erro));
-        window.location.href = "/Da - Roça/HTML/daroca.html";
+        window.location.href = "/Projeto Daroça/Da - Roça/HTML/daroca.html";
 }
 

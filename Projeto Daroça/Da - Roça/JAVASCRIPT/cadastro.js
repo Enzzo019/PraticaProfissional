@@ -91,7 +91,7 @@ function post_foi(NomeDigitado) {
     document.getElementById("cadastrado").innerHTML = NomeDigitado[0].nome;
 
     // redireciona para a página principal
-    window.location.href = "/Da - Roça/HTML/daroca.html";
+    window.location.href = "/Projeto Daroça/Da - Roça/HTML/daroca.html";
     
 }
 
@@ -133,12 +133,10 @@ function senha(NomeDigitado,login_email,senhas) {
             document.getElementById("cadastrado").innerHTML = NomeDigitado[i].nome;
 
             // redireciona para a página principal
-            window.location.href = "/Da - Roça/HTML/daroca.html";
+            window.location.href = "/Projeto Daroça/Da - Roça/HTML/daroca.html";
             return;
         }
-
-
-    } 
+    }
     document.getElementById("erro").innerHTML = "<p>Conta não encontrado</p>";
     limpa()
 } 

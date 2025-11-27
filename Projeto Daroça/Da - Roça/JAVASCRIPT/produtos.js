@@ -7,8 +7,8 @@ let listaProdutos = [];
 fetch(urlProdutos)
 .then(res => res.json())
 .then(data => {
-    listaProdutos = data.recordset; 
-    exibeDados(listaProdutos);      
+    listaProdutos = data.recordset;
+    exibeDados(listaProdutos);
 })
 fetch(urlCategorias)
     .then(res => res.json())
@@ -18,19 +18,19 @@ fetch(urlCategorias)
 
 
 
-function exibeDados(listaProdutos) { 
-    
+function exibeDados(listaProdutos) {
+
     let card = "";
     for (let i = 0; i < listaProdutos.length; i++) {
         card += '<div class="card-produtos">';
-        card += `<img src="/Da - Roça/${listaProdutos[i].imagem}" alt="${listaProdutos[i].descricao}">`;
+        card += `<img src="/Projeto Daroça/Da - Roça/${listaProdutos[i].imagem}" alt="${listaProdutos[i].descricao}">`;
         card += `<h3>${listaProdutos[i].nome}</h3>`;
         card += "<p>Unidade: kg</p>";
         card+=`<p id="quantidade">Unidade:<input type="number" id="${i}" value="1" min="1" max="99"></p>`
         card+=`<p>Preço: R$${listaProdutos[i].valor}</p>`
         card+=`<button onclick="Adiciona_produto(${listaProdutos[i].id},${i})">Adicionar</button>`
         card+=`</div>`;
-    }  
+    }
     limpa()
     document.getElementById("corpo").innerHTML = card;
     document.getElementById("barra_de_pesquisa").innerHTML="";
@@ -38,19 +38,18 @@ function exibeDados(listaProdutos) {
 
 function montaSelect(listaCategorias) {
     let selectHTML = '<select id="categorias">';
-    selectHTML += `<option value="0">Todas as categorias</option>`; 
+    selectHTML += `<option value="0">Todas as categorias</option>`;
     for (let i = 0; i < listaCategorias.length; i++) {
         selectHTML += `<option value="${listaCategorias[i].id}">${listaCategorias[i].nome}</option>`;
     }
     selectHTML += '</select>';
-    
-    
+
     document.getElementById("pesquisa").innerHTML = selectHTML;
 
     document.getElementById("categorias").addEventListener("change", function() {
         const categoriaId = parseInt(this.value);
         if (categoriaId === 0) {
-            exibeDados(listaProdutos);  
+            exibeDados(listaProdutos);
         } else {
             const filtrados = listaProdutos.filter(p => p.categoria === categoriaId);
             exibeDados(filtrados);
@@ -71,8 +70,8 @@ function busca() {
             return resp.json();
         })
         .then(NomeDigitado=>{
-            console.log(NomeDigitado.recordset)
-            pornome(NomeDigitado.recordset,escolha) 
+            console.log(NomeDigitado.recordset);
+            pornome(NomeDigitado.recordset,escolha);
         })
 
 }
@@ -82,14 +81,12 @@ function limpa() {
 }
 function pornome(NomeDigitado,escolha) {
     if (NomeDigitado!=null) {
-        
-    
         let card = ''
         for (let i = 0; i < NomeDigitado.length; i++) {
             let quantidade=i
             if (NomeDigitado[i].nome.toUpperCase() == escolha.toUpperCase()) {
                 card+=`<div class="card-produtos">`
-                card+=`<img src="/Da - Roça/${NomeDigitado[i].imagem}" alt="${NomeDigitado[i].descricao}">`
+                card+=`<img src="/Projeto Daroça/Da - Roça/${NomeDigitado[i].imagem}" alt="${NomeDigitado[i].descricao}">`
                 card+=`<h3>${NomeDigitado[i].nome}</h3>`
                 card+=`<p id="quantidade">Unidade:<input type="number" id="quantidades" value="1" min="1" max="99"></p>`
                 card+=`<p>Preço:R$${NomeDigitado[i].valor}</p>`
@@ -97,14 +94,14 @@ function pornome(NomeDigitado,escolha) {
                 card+=`</div>`;
                 limpa()
                 return document.getElementById("corpo").innerHTML = card;
-                
+
             }
-        } 
-    }    
+        }
+    }
         document.getElementById("corpo").innerHTML = "<p>Produto não encontrado</p>";
         limpa()
-    
-}  
+
+}
 
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -113,7 +110,7 @@ window.addEventListener("DOMContentLoaded", () => {
         document.getElementById("cadastrado").textContent = usuario.nome;
     }
     })
-let url_joga='http://localhost:8081/prod/'  
+let url_joga='http://localhost:8081/prod/'
 function Adiciona_produto(NomeDigitado,quantidade) {
     const usuario = localStorage.getItem("usuario");
 
@@ -132,10 +129,10 @@ function Adiciona_produto(NomeDigitado,quantidade) {
             })
     }
     else{
-        document.getElementById("corpo").innerHTML = '<a href="/Da - Roça/HTML/cadastro-cliente.html"  class="menu" id="cadastroentrar"><button>Faça login em uma conta</button></a>';
+        document.getElementById("corpo").innerHTML = '<a href="/Projeto Daroça/Da - Roça/HTML/cadastro-cliente.html"  class="menu" id="cadastroentrar"><button>Faça login em uma conta</button></a>';
     }
 
-} 
+}
 let produto_adicionado = JSON.parse(localStorage.getItem("card")) || [];
 
 function monta_tabela(dados, quanto) {
@@ -149,8 +146,8 @@ function monta_tabela(dados, quanto) {
     localStorage.setItem("total", total);
     console.log(total);
 
-    produto_adicionado.push(`<tr><td><img src='/Da - Roça/${dados[0].imagem}' class="imagem_pedido"></td>    <td><p>${dados[0].descricao}</p></td>   <td>${quanto}</td>   <td>${conta}</td></tr>`);
+    produto_adicionado.push(`<tr><td><img src='/Projeto Daroça/Da - Roça/${dados[0].imagem}' class="imagem_pedido"></td>    <td><p>${dados[0].descricao}</p></td>   <td>${quanto}</td>   <td>${conta}</td></tr>`);
     localStorage.setItem("card", JSON.stringify(produto_adicionado));
-    window.location.href = "/Da - Roça/HTML/pedidos.html";
+    window.location.href = "/Projeto Daroça/Da - Roça/HTML/pedidos.html";
 }
 

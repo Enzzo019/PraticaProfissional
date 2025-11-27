@@ -26,9 +26,9 @@ function ExibirDados(ListaDados) {
         if (usuarioLogado.nome === ListaDados[i].nome) {  // Filtragem para pegar só o usuário que logou ou estiver logado
           let user = "";
           user += `<h1>Olá, ${ListaDados[i].nome}!</h1>`;
-          user += "<a href='/Da - Roça/HTML/comentario.html'>Perguntas</a>";
-          user += "<a href='/Da - Roça/HTML/compras.html'>Pedidos</a>";
-          user += "<a href='/Da - Roça/HTML/cadastro-cliente.html'>Dados</a>";
+          user += "<a href='/Projeto Daroça/Da - Roça/HTML/comentario.html'>Perguntas</a>";
+          user += "<a href='/Projeto Daroça/Da - Roça/HTML/compras.html'>Pedidos</a>";
+          user += "<a href='/Projeto Daroça/Da - Roça/HTML/cadastro-cliente.html'>Dados</a>";
           document.querySelector(".opcoes-usuario").innerHTML = user;
           console.log(user)
         }
