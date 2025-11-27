@@ -52,6 +52,10 @@ function comprado() {
         .then(res => res.json())
         .then(data => console.log(data))
         .catch(erro => console.log("Erro:", erro));
+
+        localStorage.removeItem("card");
         window.location.href = "/Projeto Daroça/Da - Roça/HTML/daroca.html";
+
+
 }
 

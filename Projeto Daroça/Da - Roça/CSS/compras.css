@@ -178,13 +178,15 @@ body {
     margin-left: 50000000PX;
     background-color: white;
 }
-
-.card-historico{
+/*ard-historico{
     padding: 10px;
     margin-left:30px ;
     margin-top: 30px;
     border-collapse: collapse;
     background-color: white;
+}
+.card-historico{
+    font-size: 0px;;
 }
 td{
     padding-left: 0px;
@@ -196,6 +198,7 @@ img{
 }
 table {
     font-size: 0px;
+    text-align: center;
 }
 table > tbody{
     font-size: xx-large;
@@ -205,7 +208,56 @@ tr > th {
     margin-left: 0px ;
     gap: 1px ;
     align-items: center ;
+}*/
+
+/* Container principal da tabela */
+.card-historico {
+    margin:auto ;
+    font-size: 0px;
+    padding: 10px;
+    margin-left: 30px;
+    margin-top: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    width: fit-content;
 }
+.card-historico>tbody>p{
+    padding: 10px;
+}
+/* Configurações da tabela */
+.card-historico table {
+    border-collapse: collapse;
+    font-size: 20px;   /* Antes estava 0px → impossível de ver texto */
+    text-align: center;
+}
+
+/* Cabeçalho */
+.card-historico th {
+    padding: 15px 40px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 22px;
+    border-bottom: 3px solid #3c8f40;
+}
+
+/* Células */
+.card-historico td {
+    padding: 15px 40px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Imagens da tabela */
+.card-historico img {
+    height: 80px;
+    object-fit: contain;
+}
+
+/* Linha hover */
+.card-historico tr:hover {
+    background-color: #f8f8f8;
+}
+
 
 
 

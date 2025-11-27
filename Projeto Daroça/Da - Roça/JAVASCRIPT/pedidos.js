@@ -25,10 +25,13 @@ const fretes = {
     const totalBase = parseFloat(document.getElementById("total_a_paga").innerText) || 0;
     // soma total + frete
     const totalComFrete = totalBase + frete;
+
     let total= localStorage.setItem("total",totalComFrete)
     // atualiza o total no HTML
+
     document.getElementById("total_a_paga").innerText = totalComFrete.toFixed(2);
   });
+  
   function limpa_carinho() {
     localStorage.removeItem("card");
     localStorage.removeItem("total");

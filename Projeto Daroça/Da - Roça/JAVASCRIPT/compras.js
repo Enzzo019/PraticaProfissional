@@ -79,18 +79,21 @@ const urlProdutos = 'http://localhost:8081/historico/';
 let email =usuarioLogado.email
 fetch(urlProdutos+email)
 .then(res => res.json())
-.then(listaProdutos => {    
+.then(listaProdutos => {
     exibeCompras(listaProdutos.recordset);
 })
 
 function exibeCompras (listaProdutos) {
     console.log(listaProdutos)
     let compra = "";
+    compra+='<table>'
+    compra+="<tr><th>produto</th><th>descrição</th><th>quantidade</th><th>preço</th></tr>"
     for (let i = 0; i < listaProdutos.length; i++) {
         compra += `<tr>`;
         compra += `<td class="dados"><p>${listaProdutos[i].produtos}</p></td>`;
         compra += "</tr>";
     }
+    compra+='</table>'
     document.querySelector(".card-historico").innerHTML = compra;
     console.log("Enviado")
 };
